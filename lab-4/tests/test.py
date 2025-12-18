@@ -349,4 +349,8 @@ class TestIntegration:
         assert library.search_by_isbn("ISBN-001") is None
     
     def test_simulation_full_run(self):
+<<<<<<< HEAD:lab-4/tests/test.py
         run_simulation(steps=5, seed=42)
+=======
+        run_simulation(steps=5, seed=42)
+>>>>>>> 5e75f67ec578f1a639f2b4e96089bb1b0c554ffa:tests/test.py

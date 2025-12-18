@@ -215,4 +215,8 @@ class Library:
         }
     
     def __repr__(self) -> str:
+<<<<<<< HEAD:lab-4/src/models.py
         return f"Library(name='{self.name}', books={len(self.books)}, indexes={self.indexes})"
+=======
+        return f"Library(name='{self.name}', books={len(self.books)}, indexes={self.indexes})"
+>>>>>>> 5e75f67ec578f1a639f2b4e96089bb1b0c554ffa:src/models.py
