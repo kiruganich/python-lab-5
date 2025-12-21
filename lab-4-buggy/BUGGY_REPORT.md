@@ -207,30 +207,6 @@ def __getitem__(self, key: Union[int, slice]) -> Union[Book, List[Book]]:
     return self._books[key]
 ```
 
-## Ошибка 6 в Library.add_book
-
-**Файл:** `src/models.py`  
-**Строка:** 156  
-**Класс:** `Library`  
-**Метод:** `add_book`
-
-### Код с ошибкой
-```python
-def add_book(self, book: Book) -> None:
-    self.books.add(book)
-    self.indexes.add_book(book)  # ← должно быть self.index, не self.indexes
-    logger.info(f"Book added to library: {book}")
-```
-
-### Последствия
-- `AttributeError: 'Library' object has no attribute 'indexes'`
-- Метод `add_book` падает с ошибкой
-
-### Исправление
-```python
-self.index.add_book(book)  # index, не indexes
-```
-
 ## Кратко про использование отладчика
 
 - Поставить breakpoint на строке с ошибкой
