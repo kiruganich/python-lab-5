@@ -1,4 +1,4 @@
-# ОТЧЁТ О ОШИБКАХ
+# ОТЧЁТ ОБ ОШИБКАХ
 
 ## Ошибка 1 — сравнение через `is` вместо `==`
 `is` проверяет, указывают ли две переменные на **один и тот же объект в памяти**. Для строк это ненадежно, потому что Python может интернировать строки. Для сравнения **значений** нужно использовать `==`.
@@ -13,7 +13,7 @@
 def __eq__(self, other):
     if not isinstance(other, Book):
         return False
-    return self.isbn is other.isbn  # ← ОШИБКА ЗДЕСЬ
+    return self.isbn is other.isbn  # ОШИБКА
 ```
 
 ### Последствия
@@ -49,7 +49,7 @@ return self.isbn == other.isbn
 ### Код с ошибкой
 ```python
 def search_by_genre(self, genre: str) -> List[Book]:
-    result = [book for book in self.books if book.genre or genre]
+    result = [book for book in self.books if book.genre or genre] # ОШИБКА
     return result
 ```
 
@@ -86,7 +86,7 @@ result = [book for book in self.books if book.genre == genre]
 ### Код с ошибкой
 ```python
 def event_remove_book(self) -> str:
-    books = list(self.library.books)
+    books = list(self.library.books) 
     if not books:
         return "Cannot remove: library is empty"
     
@@ -135,7 +135,7 @@ def event_remove_book(self) -> str:
 ```python
 def __init__(self):
     self._books: List[Book] = []
-    self._mutable_default = []  # ← ОШИБКА ЗДЕСЬ
+    self._mutable_default = []  # ОШИБКА
 ```
 
 ### Последствия
@@ -181,7 +181,7 @@ def __init__(self):
 ```python
 def __getitem__(self, key: Union[int, slice]) -> Union[Book, List[Book]]:
     if isinstance(key, slice):
-        return self._books[key.start : key.stop + 1 : key.step]
+        return self._books[key.start : key.stop + 1 : key.step] # ОШИБКА
     return self._books[key]
 ```
 
