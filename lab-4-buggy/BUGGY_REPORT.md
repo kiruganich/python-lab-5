@@ -35,8 +35,8 @@ def __eq__(self, other):
 После исправления `book1 == book2` вернёт True, как ожидается.
 
 **Доказательства:**
-- ![image.png]([1error](https://github.com/kiruganich/python-lab-5/blob/1344463876f514397e19774adfdb8c677868aa5b/lab-4-buggy/screenshots/1error.png))
-- ![image.png](1print)
+- ![1error](https://github.com/kiruganich/python-lab-5/blob/1344463876f514397e19774adfdb8c677868aa5b/lab-4-buggy/screenshots/1error.png)
+
 
 
 
