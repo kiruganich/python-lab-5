@@ -35,7 +35,8 @@ def __eq__(self, other):
 После исправления `book1 == book2` вернёт True, как ожидается.
 
 **Доказательства:**
-- ![1error](https://github.com/kiruganich/python-lab-5/blob/1344463876f514397e19774adfdb8c677868aa5b/lab-4-buggy/screenshots/1error.png)
+![1error](https://github.com/kiruganich/python-lab-5/blob/1344463876f514397e19774adfdb8c677868aa5b/lab-4-buggy/screenshots/1error.png)
+![2error](https://github.com/kiruganich/python-lab-5/blob/a2974435ea74181ed1521fcd9349833781740c3d/lab-4-buggy/screenshots/1print.png)
 
 
 
@@ -77,8 +78,8 @@ def search_by_genre(self, genre: str) -> List[Book]:
 После исправления `lib.search_by_genre("Biology")` вернёт пустой список, `lib.search_by_genre("Science")` вернёт только первую книгу.
 
 **Доказательства:**
-- ![image.png](2error)
-- ![image.png](2print)
+- ![2error](https://github.com/kiruganich/python-lab-5/blob/f8125d420d32e0d0d6c5097afb4bee68115fb38b/lab-4-buggy/screenshots/2error.png)
+- ![2print](https://github.com/kiruganich/python-lab-5/blob/f8125d420d32e0d0d6c5097afb4bee68115fb38b/lab-4-buggy/screenshots/2print.png)
 
 
 
@@ -133,8 +134,8 @@ def event_remove_book(self) -> str:
 После исправления второй вызов вернёт "Failed to remove book…", поведение корректно.
 
 **Доказательства:**
-- ![image.png](3error)
-- ![image.png](3print)
+- ![3error](https://github.com/kiruganich/python-lab-5/blob/f8125d420d32e0d0d6c5097afb4bee68115fb38b/lab-4-buggy/screenshots/3error.png)
+- ![3print](https://github.com/kiruganich/python-lab-5/blob/f8125d420d32e0d0d6c5097afb4bee68115fb38b/lab-4-buggy/screenshots/3print.png)
 
 
 ## Ошибка 4 — изменяемое значение по умолчанию
@@ -176,8 +177,8 @@ def __init__(self):
 После исправления два экземпляра имеют независимые списки, изменение в одном не влияет на другой.
 
 **Доказательства:**
-- ![image.png](4error)
-- ![image.png](4print)
+- ![4error](https://github.com/kiruganich/python-lab-5/blob/f8125d420d32e0d0d6c5097afb4bee68115fb38b/lab-4-buggy/screenshots/4error.png)
+- ![4print](https://github.com/kiruganich/python-lab-5/blob/f8125d420d32e0d0d6c5097afb4bee68115fb38b/lab-4-buggy/screenshots/4print.png)
 
 
 
@@ -218,4 +219,4 @@ def __getitem__(self, key: Union[int, slice]) -> Union[Book, List[Book]]:
 После исправления `bc[0:2]` вернёт 2 элемента, `bc[0:3]` вернёт 3 элемента.
 
 **Доказательства:**
-- ![image.png](5error)
+- ![5error](https://github.com/kiruganich/python-lab-5/blob/f8125d420d32e0d0d6c5097afb4bee68115fb38b/lab-4-buggy/screenshots/5error.png)
