@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "lab-4-buggy"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

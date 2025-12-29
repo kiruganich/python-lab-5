@@ -2,7 +2,7 @@ import random
 import logging
 from typing import List, Callable
 from src.models import Library, Book
-from src.constants import TITLES, AUTHORS, GENRES
+from src.constants import BOOK_TITLES as TITLES, AUTHORS, GENRES
 
 logger = logging.getLogger(__name__)
 

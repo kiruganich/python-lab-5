@@ -30,11 +30,13 @@ class Book:
                 keyword_lower in self.author.lower())
 
 
+_mutable_default = [] # общий список на класс
+
 class BookCollection:
     
     def __init__(self):
         self._books: List[Book] = []
-        self._mutable_default = []  # ! ОШИБКА 4: изменяемое значение по умолчанию !
+        self._mutable_default = _mutable_default  # ! ОШИБКА 4: изменяемое значение по умолчанию !
     
     def add(self, book: Book) -> None:
         if not isinstance(book, Book):
@@ -144,7 +146,6 @@ class Library:
         logger.info(f"Library '{name}' initialized")
     
     def add_book(self, book: Book) -> None:
-        # ! ОШИБКА 3: изменение коллекции во время итерации (потенциальная) !
         self.books.add(book)
         self.index.add_book(book)
         logger.info(f"Book added to library: {book}")
